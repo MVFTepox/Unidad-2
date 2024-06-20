@@ -1,0 +1,24 @@
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tab-content > .tab-pane.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* api n°1 */
+
+.gifperso { 
+    border-radius: 15px;    
+}

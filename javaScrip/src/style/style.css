@@ -1,0 +1,27 @@
+body{
+    background-image: url('../Documents/img/Zoro.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%
+}
+
+.container{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0 6px rgba(0, 0, 0, 0.1);
+}
+.is-invalid {
+    border-color: #dc3545; /* Color de borde rojo para indicar error */
+}
+
+.is-invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* Sombra roja */
+}
+
+.valid {
+    border-color: #28a745; /* Color de borde verde para indicar validación */
+}
+
+.valid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* Sombra verde */
+}
