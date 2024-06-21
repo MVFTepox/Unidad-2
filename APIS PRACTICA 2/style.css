@@ -1,8 +1,8 @@
-.tab-content > .tab-pane {
+.tab-content>.tab-pane {
     display: none;
 }
 
-.tab-content > .tab-pane.show {
+.tab-content>.tab-pane.show {
     display: block;
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -11,6 +11,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -19,14 +20,18 @@
 
 /* api n°1 */
 
-.gifperso { 
-    border-radius: 15px;    
+.gifperso {
+    border-radius: 15px;
 }
 
+.tacosdePastor {
+    background: linear-gradient(to right, #000000, #000000, #0044ff);
+    margin: 0;
+}
 
 /* api n°2 */
 .gifperso {
-    color:green;
+    color: green;
 }
 
 .card img {
