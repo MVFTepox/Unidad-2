@@ -36,7 +36,31 @@ document.getElementById('generate-user').addEventListener('click', async functio
                             role="tab" aria-controls="Contraseña" aria-selected="false"><i class="bi icon-pers bi-lock"></i></button>
                     </li>
                 </ul>
+                <div class="card-body">
+                <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="Nombre" role="tabpanel" aria-labelledby="nombre-tab">
+                
+                    <p>${data.results[0].name.first} ${data.results[0].name.last}</p>
+                </div>
+                <div class="tab-pane fade" id="Correo" role="tabpanel" aria-labelledby="correo-tab">
+                    <p>${data.results[0].email}</p>
+                </div>
+                <div class="tab-pane fade" id="Fecha" role="tabpanel" aria-labelledby="fecha-tab">
+                    <p>${data.results[0].registered.date}</p>
+                </div>
+                <div class="tab-pane fade" id="Direccion" role="tabpanel" aria-labelledby="direccion-tab">
+                    <p>${data.results[0].location.street.name} ${data.results[0].location.street.number}</p>
+                </div>
+                <div class="tab-pane fade" id="Telefono" role="tabpanel" aria-labelledby="telefono-tab">
+                    <p>${data.results[0].phone}</p>
+                </div>
+                <div class="tab-pane fade" id="Contraseña" role="tabpanel" aria-labelledby="contraseña-tab">
+                    <p >${data.results[0].login.password}</p>
+                </div>
             </div>
+            </div>
+
+            
             
             `;
         })
