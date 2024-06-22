@@ -17,12 +17,38 @@
     }
 }
 
+body{
+    background: linear-gradient(45deg,red,blue,green,black);
+    background-repeat: no-repeat;
+    background-size: 400% 400%;
+    animation: background 15s ease infinite;
+}
+@keyframes background {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.primarcontainer {
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.473);
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    
+}
+
 
 /* api n°1 */
 
-.gifperso {
-    border-radius: 15px;
-}
+
 
 .tacosdePastor {
     background: linear-gradient(to right, #000000, #000000, #0044ff);
@@ -39,3 +65,4 @@
     height: 200px;
     object-fit: cover;
 }
+

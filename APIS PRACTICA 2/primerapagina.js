@@ -1,6 +1,7 @@
 const askButton = document.getElementById('askButton');
-const defaultColor = "linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 68, 255))";
-const lightBgColor = "linear-gradient(to right, rgb(229, 229, 229), rgb(0, 68, 255), #04f)";
+const colorletra = document.getElementById('gif');
+const defaultColor = "linear-gradient(25deg, #d21111 , #0044ff)";
+const lightBgColor = "linear-gradient(25deg, #d24411, #0044ff)";
 
 askButton.addEventListener('click', async function () {
     await fetch('https://yesno.wtf/api')
@@ -14,17 +15,17 @@ askButton.addEventListener('click', async function () {
                     <img src="${data.image}" style="width: 200px;" class="img-fluid align-self-center rounded-circle gifperso p-3" alt="Respuesta de ${data.answer}">
                 </div>
             `;
+
+            const bg = document.querySelector('.tacosdePastor'); // Asegúrate de que la clase coincide
+            if (data.answer.toUpperCase() === 'YES') {
+                bg.style.background = defaultColor;
+            } else {
+                bg.style.background = lightBgColor;
+            }
         })
         .catch(error => {
             console.error('Error al obtener la respuesta:', error);
             const answerDiv = document.getElementById('answer');
             answerDiv.innerHTML = `<p>Error al obtener la respuesta. Por favor, inténtalo de nuevo.</p>`;
         });
-
-    const bg = document.querySelector('.tacosDePastor');
-    if (bg.style.background === "" || bg.style.background === defaultColor) {
-        bg.style.background = lightBgColor;
-    } else {
-        bg.style.background = defaultColor;
-    }
 });
