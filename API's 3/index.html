@@ -67,28 +67,29 @@
                                 <form action="
                                 " id="form">
                                     <div class="mb-3">
-                                        <label for="id" class="form-label">ID </label>
+                                        <label for="id" class="form-label">ID <span class="badge text-bg-secondary">Max 12</span></label>
                                         <input type="number" max="12" min="1" class="form-control" id="id">
                                     </div>
                                     <div class="gap-2  d-grid">
-                                        <button type="submit" class="btn btn-primary">Buscar</button>
+                                        <button type="submit"  id="boton-buscar-id"   class="btn btn-danger">Buscar</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <div class="card-title" style="object-fit: cover;height: 50px ;"
+                                <div class="card-title text-center" style="object-fit: cover;height: 50px ;"
                                     id="nombreDeUsuarioCarta"></div>
                                 <hr>
-                                <img src=""
+                                <img  id="imagen-user" src=""
                                     class="img-fluid rounded-circle border border-3 border-black align-self-center p-2"
                                     style="
                                     width: 200px;
                                     height: 200px;
                                     object-fit: cover;
                                 " alt="">
-                                <div class="card-body" id="cartaDeUsuario"></div>
+                                <div class="card-body" id="cartaDeUsuario">
+                                </div>
                             </div>
 
                         </div>

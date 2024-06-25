@@ -44,3 +44,33 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+const form = document.getElementById('form');
+form.addEventListener('submit', (e) => {
+    const imguser = document.getElementById('imagen-user');
+    imguser.src = '';
+    e.preventDefault();
+    const id = document.getElementById('id').value;
+    const url = `https://reqres.in/api/users/${id}`;
+    fetch(url)  
+        .then(response => response.json())
+        .then(data => {
+            imguser.src = data.data.avatar;
+            const nombre = document.getElementById('nombreDeUsuarioCarta');
+            nombre.innerHTML = `
+            <h1 class="text-center my-3">${data.data.first_name} ${data.data.last_name}</h1>
+            `
+            const user = document.getElementById('cartaDeUsuario');
+            user.innerHTML = '';
+            const div = document.createElement('div');
+            div.classList.add('card');
+            div.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">${data.data.first_name} ${data.data.last_name}</h5>
+                    <p class="card-text">${data.data.email}</p>
+                </div>
+            `;
+            user.append(div);
+        });
+})  
