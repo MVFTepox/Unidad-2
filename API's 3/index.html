@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- custom -->
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
@@ -16,20 +17,25 @@
     <div class="container-fluid">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="list-users-tab" data-bs-toggle="tab" data-bs-target="#list-users" type="button" role="tab" aria-controls="list-users" aria-selected="true">Lista de usuarios</button>
+                <button class="nav-link active" id="list-users-tab" data-bs-toggle="tab" data-bs-target="#list-users"
+                    type="button" role="tab" aria-controls="list-users" aria-selected="true">Lista de usuarios</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="users-tab" data-bs-toggle="tab" data-bs-target="#users" type="button" role="tab" aria-controls="users" aria-selected="false">Usuario</button>
+                <button class="nav-link" id="users-tab" data-bs-toggle="tab" data-bs-target="#users" type="button"
+                    role="tab" aria-controls="users" aria-selected="false">Usuario</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="create-user-tab" data-bs-toggle="tab" data-bs-target="#create-user" type="button" role="tab" aria-controls="create-user" aria-selected="false">Crear usuario</button>
+                <button class="nav-link" id="create-user-tab" data-bs-toggle="tab" data-bs-target="#create-user"
+                    type="button" role="tab" aria-controls="create-user" aria-selected="false">Crear usuario</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="form-tab" data-bs-toggle="tab" data-bs-target="#form" type="button" role="tab" aria-controls="form" aria-selected="false">Registro/Iniciar sesión</button>
+                <button class="nav-link" id="form-tab" data-bs-toggle="tab" data-bs-target="#form" type="button"
+                    role="tab" aria-controls="form" aria-selected="false">Registro/Iniciar sesión</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="list-users" role="tabpanel" aria-labelledby="list-users-tab" tabindex="0">
+            <div class="tab-pane fade show active" id="list-users" role="tabpanel" aria-labelledby="list-users-tab"
+                tabindex="0">
                 <div class="container mt-3">
                     <h1 class="text-center my-3"> Lista de usuarios</h1>
                     <div class="row" id="root"></div>
@@ -42,7 +48,7 @@
                             </li>
                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                             <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            
+
                             <li class="page-item">
                                 <a class="page-link" href="#" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
@@ -53,7 +59,42 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="users" role="tabpanel" aria-labelledby="users-tab" tabindex="0">
-                ...
+                <div class="container">
+                    <h1 class="text-center my-3">Carta de usuario individual</h1>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="container">
+                                <form action="
+                                " id="form">
+                                    <div class="mb-3">
+                                        <label for="id" class="form-label">ID </label>
+                                        <input type="number" max="12" min="1" class="form-control" id="id">
+                                    </div>
+                                    <div class="gap-2  d-grid">
+                                        <button type="submit" class="btn btn-primary">Buscar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-title" style="object-fit: cover;height: 50px ;"
+                                    id="nombreDeUsuarioCarta"></div>
+                                <hr>
+                                <img src=""
+                                    class="img-fluid rounded-circle border border-3 border-black align-self-center p-2"
+                                    style="
+                                    width: 200px;
+                                    height: 200px;
+                                    object-fit: cover;
+                                " alt="">
+                                <div class="card-body" id="cartaDeUsuario"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="create-user" role="tabpanel" aria-labelledby="create-user-tab" tabindex="0">
                 ...
@@ -65,7 +106,9 @@
     </div>
 
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="./src/js/scrip.js"></script>
 </body>
 
