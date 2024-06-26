@@ -29,8 +29,12 @@
                     type="button" role="tab" aria-controls="create-user" aria-selected="false">Crear usuario</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="form-tab" data-bs-toggle="tab" data-bs-target="#form" type="button"
-                    role="tab" aria-controls="form" aria-selected="false">Registro/Iniciar sesión</button>
+                <button class="nav-link" id="recursos-tab" data-bs-toggle="tab" data-bs-target="#Recusros"
+                    type="button" role="tab" aria-controls="Recusros" aria-selected="false">Recusos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="recursos-individuales-tab" data-bs-toggle="tab" data-bs-target="#Recusros-individuales"
+                    type="button" role="tab" aria-controls="Recusros-individuales" aria-selected="false">recursos individuales</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -67,11 +71,13 @@
                                 <form action="
                                 " id="form">
                                     <div class="mb-3">
-                                        <label for="id" class="form-label">ID <span class="badge text-bg-secondary">Max 12</span></label>
+                                        <label for="id" class="form-label">ID <span class="badge text-bg-secondary">Max
+                                                12</span></label>
                                         <input type="number" max="12" min="1" class="form-control" id="id">
                                     </div>
                                     <div class="gap-2  d-grid">
-                                        <button type="submit"  id="boton-buscar-id"   class="btn btn-danger">Buscar</button>
+                                        <button type="submit" id="boton-buscar-id"
+                                            class="btn btn-danger">Buscar</button>
                                     </div>
                                 </form>
                             </div>
@@ -81,7 +87,7 @@
                                 <div class="card-title text-center" style="object-fit: cover;height: 50px ;"
                                     id="nombreDeUsuarioCarta"></div>
                                 <hr>
-                                <img  id="imagen-user" src=""
+                                <img id="imagen-user" src=""
                                     class="img-fluid rounded-circle border border-3 border-black align-self-center p-2"
                                     style="
                                     width: 200px;
@@ -98,10 +104,80 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="create-user" role="tabpanel" aria-labelledby="create-user-tab" tabindex="0">
-                ...
+                <div class="container">
+
+                    <div class="row mt-5">
+                        <div class="col-md-1 " style="writing-mode: vertical-rl; transform: rotate(180deg); ">
+                            <h1 class="text-center"> Iniciar sesión</h1>
+                        </div>
+                        <div class=" col-md-4">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="Contraseña">
+                            </div>
+                            <div class="gap-2  d-grid">
+                                <button type="submit" id="boton-iniciar-sesion" class="btn btn-danger">iniciar
+                                    sesión</button>
+                            </div>
+                            <h6 id="mensajedeConfimacion2"></h6>
+                        </div>
+                        <div class="col-md-1" style="writing-mode: vertical-rl; transform: rotate(180deg); ">
+                            <h1 class="text-center">Registrase</h1>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="CorreoRegistro" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="CorreoRegistro">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ContraseñaRegistro" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="ContraseñaRegistro">
+                            </div>
+                            <div class="gap-2  d-grid">
+                                <button type="submit" id="boton-crear-usuario" class="btn btn-danger">Crear
+                                    usuario</button>
+                            </div>
+                            <h6 id="mensajedeConfimacion1"></h6>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Datos para prueba de inicio de secion</h5>
+                                        <p>eve.holt@reqres.in</p>
+                                        <p>cityslicka</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Datos para prueba de Registro</h5>
+                                        <p>eve.holt@reqres.in</p>
+                                        <p>pistol</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab" tabindex="0">
-                ...
+            <div class="tab-pane fade" id="recursos" role="tabpanel" aria-labelledby="recursos-tab" tabindex="0">
+ssssssssssss
+            </div>
+            <div class="tab-pane fade" id="recursos-individuales" role="tabpanel" aria-labelledby="recursos-individuales-tab"
+                tabindex="0">
+ssssssssssssssdsdsdsds
             </div>
         </div>
     </div>

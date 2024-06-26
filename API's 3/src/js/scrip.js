@@ -32,11 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
     }
-
-    // Cargar la primera página de usuarios al cargar la página
-    loadUsers(1);
-
-    // Event listener para el clic en la paginación
+    loadUsers(1); // Cargar la primera página de usuarios
     pagination.addEventListener('click', (e) => {
         if (e.target.tagName === 'A') {
             const pageNumber = e.target.textContent;
@@ -45,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 const form = document.getElementById('form');
 form.addEventListener('submit', (e) => {
     const imguser = document.getElementById('imagen-user');
@@ -53,7 +48,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const id = document.getElementById('id').value;
     const url = `https://reqres.in/api/users/${id}`;
-    fetch(url)  
+      fetch(url)
         .then(response => response.json())
         .then(data => {
             imguser.src = data.data.avatar;
@@ -73,4 +68,59 @@ form.addEventListener('submit', (e) => {
             `;
             user.append(div);
         });
-})  
+});
+
+const botonDeRegistro = document.getElementById('boton-crear-usuario');
+botonDeRegistro.addEventListener('click', (e) => {
+    const url = 'https://reqres.in/api/register';
+    const email = document.getElementById('CorreoRegistro').value;
+    const password = document.getElementById('ContraseñaRegistro').value;
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            email,
+            password
+        })
+    })
+        .then(response => response.json())
+        .then(data => {
+            const mensaje = document.getElementById('mensajedeConfimacion1');
+            mensaje.classList.add('text-center');
+            mensaje.classList.add('mt-3');
+            mensaje.innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+});
+
+
+const botonDeinicarSesion = document.getElementById('boton-iniciar-sesion');
+botonDeinicarSesion.addEventListener('click', (e) => {
+    const url = 'https://reqres.in/api/login';
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('Contraseña').value;
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            email,
+            password
+        })
+    })
+        .then(response => response.json())
+        .then(data => {
+            const mensaje = document.getElementById('mensajedeConfimacion2');
+            mensaje.classList.add('text-center');
+            mensaje.classList.add('mt-3');
+            mensaje.innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+});
