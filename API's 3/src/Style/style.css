@@ -1,20 +1,30 @@
-.bg-cartaUsuario{
+.bg-cartaUsuario {
     background-color: rgba(43, 139, 73, 0.57);
 }
 
 /* CSS personalizado para los colores de los recursos */
 .bg-color1 {
-    background-color: #f5a623; /* Ejemplo de color */
-    color: #fff; /* Color de texto */
+    background-color: #f5a623;
+    /* Ejemplo de color */
+    color: #fff;
+    /* Color de texto */
 }
 
 .bg-color2 {
-    background-color: #8e44ad; /* Otro ejemplo de color */
-    color: #fff; /* Color de texto */
+    background-color: #8e44ad;
+    /* Otro ejemplo de color */
+    color: #fff;
+    /* Color de texto */
 }
 
 /* Ajustes de transición */
 .tab-pane.fade {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+}
+
+.paedritoclavounclavito {
+
+    background-color: rgba(255, 255, 255, 0.448);
+    
 }
