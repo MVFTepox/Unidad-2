@@ -15,7 +15,8 @@
 <body>
     <div class="container primarcontainer my-3">
         <h1 class="text-center">Practica de las Apis</h1>
-        <ul class="nav nav-tabs  link-light justify-content-center" id="myTab" role="tablist">
+        <ul class="nav nav-tabs link-light justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="Api-1-tab" data-bs-toggle="tab" data-bs-target="#api-1"
                     type="button" role="tab" aria-controls="Api-1" aria-selected="true">Api 1</button>
             </li>
@@ -27,12 +28,9 @@
         <div class="tab-content" id="myTabContent">
             <!-- api 1 -->
             <div class="tab-pane fade show active" id="api-1" role="tabpanel" aria-labelledby="Api-1-tab">
-
-                <div id="tacosdePastor" class="container tacosdePastor my-3">
+                <div id="" class="container tacosdePastor my-3">
                     <h1 class="text-center gif">Generador de Gif</h1>
-
                     <h1 class="text-center gif">YES or NO</h1>
-
                     <div class="mt-4 ">
                         <div class="row">
                             <div class="col-md-4"></div>
@@ -46,23 +44,25 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- api 2 -->
             <div class="tab-pane fade" id="api-2" role="tabpanel" aria-labelledby="Api-2-tab">
                 <div class="container mt-3">
                     <h2 class="text-center">Random User Generator</h2>
-                    <div class="" id="generadorResultados">
+                    <div id="generadorResultados">
                         <div class="row">
-                            <div class="col-md-4"></div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <h2 class="card-title text-center pt-2"></h2>
-
-                                    <img src=""
+                            <div class="col-md-4 d-inline">
+                                <h5 class="text-center d-inline">Historial</h5>
+                                <button id="borrarHistorial" class="btn btn-danger d-inline ms-3" onclick="borrarHistorial()"><i class="bi bi-trash"></i></button>
+                                <div id="historialContenedor" class="overflow-auto p-4 mt-2" style="max-height: 600px; ">
+                                </div>
+                            </div>
+                            <div class="col-md-4 pt-5 mt-3">
+                                <div class="card " style="height: 450px;">
+                                    <h2 id="fullName" class="card-title text-center pt-2"></h2>
+                                    <img id="photo" src=""
                                         class="img-fluid rounded-circle border border-3 border-black align-self-center p-2"
                                         style="width: 200px;" alt="">
-
                                     <ul class="nav nav-tabs justify-content-center my-3" id="userTab" role="tablist">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="Nombre-id-tab" data-bs-toggle="tab"
@@ -135,20 +135,20 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                </div>
-                                <div class="col-md-4"></div>
-                            </div>
-                            <div class="row align-items-center">
-                                <div class="col-md-12 d-flex justify-content-center">
-                                    <button id="generate-user" class="btn btn-dark mt-3">Generate Random User</button>
                                 </div>
                             </div>
-
+                            <div class="col-md-4">
+                                <br><br><br><br><br><br><br>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="d-grid gap-2 ">
+                                        <button id="generate-user" class="btn btn-dark mt-3">Generate Random User</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

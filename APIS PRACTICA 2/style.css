@@ -42,6 +42,7 @@ body{
     color: white;
     padding: 20px;
     margin: 20px;
+    box-shadow: #00000060 0px 0px 10px 10px;
     
 }
 
@@ -51,8 +52,9 @@ body{
 
 
 .tacosdePastor {
-    background: linear-gradient(to right, #000000, #000000, #0044ff);
+    background: linear-gradient(to right, #000000, #0044ff);
     margin: 0;
+
 }
 
 /* api n°2 */
